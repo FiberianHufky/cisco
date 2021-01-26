@@ -73,3 +73,13 @@ exit
 interface range fastEthernet 0/5-6
 channel-group 5 mode active
 exit
+
+
+ip dhcp snooping
+ip dhcp snooping vlan 10,20
+interface range gigabitEthernet 0/1-2
+ip dhcp snooping trust
+exit
+interface range fastEthernet 0/1-6
+ip dhcp snooping limit rate 10
+exit
