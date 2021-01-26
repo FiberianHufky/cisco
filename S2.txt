@@ -23,6 +23,7 @@ interface fastEthernet 0/24
 switchport mode access
 switchport access vlan 10
 exit
+
 interface range fastEthernet 0/1-2
 switchport mode trunk
 switchport trunk allowed vlan 10,20
@@ -30,28 +31,42 @@ exit
 
 interface port-channel 1
 no shutdown
-exit
-interface range fastEthernet 0/1-2
-channel-group 1 mode active
-exit
-interface port-channel 1
 switchport mode trunk
 switchport trunk allowed vlan 10,20
 exit
 
+interface range fastEthernet 0/1-2
+channel-group 1 mode active
+exit
+
+
 interface range fastEthernet 0/3-4
-switchport trunk encapsulation dot1q
 switchport mode trunk
 switchport trunk allowed vlan 10,20
 exit
 
 interface port-channel 3
 no shutdown
-switchport trunk encapsulation dot1q
 switchport mode trunk
 switchport trunk allowed vlan 10,20
 exit
 
 interface range fastEthernet 0/3-4
 channel-group 3 mode active
+exit
+
+
+interface range fastEthernet 0/5-6
+switchport mode trunk
+switchport trunk allowed vlan 10,20
+exit
+
+interface port-channel 5
+no shutdown
+switchport mode trunk
+switchport trunk allowed vlan 10,20
+exit
+
+interface range fastEthernet 0/5-6
+channel-group 5 mode active
 exit
