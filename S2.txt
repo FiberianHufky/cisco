@@ -72,4 +72,4 @@ channel-group 5 mode active
 exit
 
 
-spanning-tree mode rapid-pvstp
+spanning-tree mode rapid-pvst
