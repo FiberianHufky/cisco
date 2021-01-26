@@ -83,3 +83,6 @@ exit
 interface range fastEthernet 0/1-6
 ip dhcp snooping limit rate 10
 exit
+
+spanning-tree vlan 10 root primary
+spanning-tree vlan 20 root secondary
