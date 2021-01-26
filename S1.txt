@@ -71,4 +71,4 @@ interface range fastEthernet 0/5-6
 channel-group 5 mode active
 exit
 
-spanning-tree mode rapid-pvstp
+spanning-tree mode rapid-pvst
