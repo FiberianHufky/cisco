@@ -1,3 +1,5 @@
+#### sprawdzić na etherchannelach dhcp snooping
+
 en
 conf t
 
@@ -14,6 +16,27 @@ exit
 interface vlan 20
 no shutdown
 exit
+
+
+
+interface range fastEthernet 0/1-2
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20
+exit
+
+interface port-channel 1
+no shutdown
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20
+exit
+
+interface range fastEthernet 0/1-2
+channel-group 1 mode active
+exit
+
+
 
 interface range fastEthernet 0/3-4
 switchport trunk encapsulation dot1q
@@ -32,8 +55,21 @@ interface range fastEthernet 0/3-4
 channel-group 3 mode active
 exit
 
-interface range gigabitEthernet 0/1-2
+
+
+interface range fastEthernet 0/5-6
 switchport trunk encapsulation dot1q
 switchport mode trunk
 switchport trunk allowed vlan 10,20
+exit
+
+interface port-channel 5
+no shutdown
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20
+exit
+
+interface range fastEthernet 0/5-6
+channel-group 5 mode active
 exit
