@@ -18,3 +18,5 @@ exit
 interface serial 0/0/1
 ip address 10.10.10.1 255.255.255.252
 no shutdown
+exit
+
