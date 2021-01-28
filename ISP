@@ -1,0 +1,13 @@
+en
+conf t
+interface serial 0/0/1
+ip address 10.10.10.2 255.255.255.252
+no shutdown
+exit
+
+ip dhcp pool PULA-10
+network 192.168.10.0 255.255.255.0
+domain-name SIEC-10
+default-router 192.168.10.254
+dns-server 192.168.10.100
+exit
