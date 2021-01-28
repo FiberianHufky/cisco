@@ -80,3 +80,13 @@ spanning-tree portfast
 spanning-tree bpduguard enable
 exit
 
+
+interface range fastEthernet0/7-22
+switchport mode access
+switchport access vlan 66
+shutdown
+exit
+
+vlan 66
+name black-hole
+exit
