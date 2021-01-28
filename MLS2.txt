@@ -88,3 +88,14 @@ exit
 spanning-tree mode rapid-pvst
 spanning-tree vlan 10 root secondary
 spanning-tree vlan 20 root primary
+
+
+interface range fastEthernet0/7-24
+switchport mode access
+switchport access vlan 66
+shutdown
+exit
+
+vlan 66
+name black-hole
+exit
