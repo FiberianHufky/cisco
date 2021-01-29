@@ -1,0 +1,23 @@
+en 
+conf t
+interface serial 0/0/0
+ip address 20.20.20.2 255.255.255.252
+no shutdown
+
+interface gigabitEthernet 0/1
+no shutdown
+exit
+
+interface gigabitEthernet 0/1.10
+encapsulation dot1Q 10
+ip address 192.168.10.253 255.255.255.252
+ip helper-address 20.20.20.1
+no shutdown
+exit
+
+interface gigabitEthernet 0/1.20
+encapsulation dot1Q 20
+ip address 192.168.10.253 255.255.255.252
+ip helper-address 20.20.20.1
+no shutdown
+exit
