@@ -1,5 +1,6 @@
 en 
 conf t
+
 interface serial 0/0/0
 ip address 20.20.20.2 255.255.255.252
 no shutdown
@@ -21,3 +22,30 @@ ip address 192.168.10.253 255.255.255.0
 ip helper-address 20.20.20.1
 no shutdown
 exit
+
+
+ip dhcp pool PULA-10
+network 192.168.10.0 255.255.255.0
+domain-name SIEC-10
+default-router 192.168.10.254
+dns-server 192.168.10.100
+exit
+
+ip dhcp pool PULA-20
+network 192.168.20.0 255.255.255.0
+domain-name SIEC-20
+default-router 192.168.20.254
+dns-server 192.168.20.100
+exit
+
+
+ip dhcp excluded-address 192.168.10.1
+ip dhcp excluded-address 192.168.10.2
+ip dhcp excluded-address 192.168.10.3
+ip dhcp excluded-address 192.168.20.1
+ip dhcp excluded-address 192.168.20.2
+ip dhcp excluded-address 192.168.20.3
+ip dhcp excluded-address 192.168.10.254
+ip dhcp excluded-address 192.168.20.254
+ip dhcp excluded-address 192.168.10.253
+ip dhcp excluded-address 192.168.20.253
