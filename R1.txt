@@ -21,6 +21,21 @@ no shutdown
 exit
 
 
+ip dhcp pool PULA-10
+network 192.168.10.0 255.255.255.0
+domain-name SIEC-10
+default-router 192.168.10.254
+dns-server 192.168.10.100
+exit
+
+ip dhcp pool PULA-20
+network 192.168.20.0 255.255.255.0
+domain-name SIEC-20
+default-router 192.168.20.254
+dns-server 192.168.20.100
+exit
+
+
 ip dhcp excluded-address 192.168.10.1
 ip dhcp excluded-address 192.168.10.2
 ip dhcp excluded-address 192.168.10.3
