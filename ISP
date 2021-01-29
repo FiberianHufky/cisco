@@ -14,6 +14,7 @@ exit
 
 ip dhcp pool PULA-20
 network 192.168.20.0 255.255.255.0
+domain-name SIEC-20
 default-router 192.168.20.254
 dns-server 192.168.20.100
 exit
