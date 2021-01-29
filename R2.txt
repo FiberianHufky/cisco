@@ -3,6 +3,7 @@ conf t
 
 interface serial 0/0/0
 ip address 20.20.20.2 255.255.255.252
+clockrate 4000000
 no shutdown
 
 interface serial 0/1/0
