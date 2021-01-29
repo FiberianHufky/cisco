@@ -106,3 +106,16 @@ switchport trunk encapsulation dot1q
 switchport mode trunk
 switchport trunk allowed vlan 10,20
 exit
+
+
+interface vlan 10
+ip address 192.168.10.3 255.255.255.0
+no shutdown
+exit
+
+
+interface vlan 20
+ip address 192.168.20.3 255.255.255.0
+no shutdown
+exit
+
